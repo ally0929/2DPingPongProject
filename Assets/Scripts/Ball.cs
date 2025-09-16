@@ -11,11 +11,9 @@ public class Ball : MonoBehaviour
     {
        InitialPush;
 
-
     }
 
     private void InitialPush()
-    
     {
         Vector2 dir = Vector2.left;
         dir.y = Random.Range(-maxInitialAngle, maxInitialAngle);
@@ -24,6 +22,7 @@ public class Ball : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
+
     {
         Debug.Log("ladida");
     }
