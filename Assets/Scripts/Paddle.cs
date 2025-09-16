@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Paddle : MonoBehaviour
 {
   public Rigidbody2D rb2d;
-  public float id;
+  public int id;
   public float moveSpeed = 2f;
 
 
@@ -37,9 +37,9 @@ public class Paddle : MonoBehaviour
 
   private void Move(float movement)
   {
-    Vector2 velo = rb2d.velocity;
+    Vector2 velo = rb2d.linearVelocity;
     velo.y = moveSpeed * movement;
-    rb2d.velocity = velo; 
+    rb2d.linearVelocity = velo; 
 
   }
 
