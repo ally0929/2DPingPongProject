@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance 
+    public static GameManager instance;
     public int scorePlayer1, scorePlayer2; 
     public ScoreText scoreTextLeft, scoreTextRight;
     public System.Action onReset;
