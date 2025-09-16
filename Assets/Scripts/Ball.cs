@@ -9,11 +9,23 @@ public class Ball : MonoBehaviour
     
     private void Start()
     {
+       InitialPush;
+
+
+    }
+
+    private void InitialPush()
+    
+    {
         Vector2 dir = Vector2.left;
         dir.y = Random.Range(-maxInitialAngle, maxInitialAngle);
-
         rb2d.linearVelocity = dir * moveSpeed;
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("ladida");
     }
 
 }
