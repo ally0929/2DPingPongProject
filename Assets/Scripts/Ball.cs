@@ -6,6 +6,8 @@ public class Ball : MonoBehaviour
     public Rigidbody2D rb2d;
     public float maxInitialAngle = 0.67f;
     public float moveSpeed = 1f;
+    public float startx = 0f;
+    public float maxSyartY = 4f;
     
     private void Start()
     {
@@ -19,6 +21,11 @@ public class Ball : MonoBehaviour
         dir.y = Random.Range(-maxInitialAngle, maxInitialAngle);
         rb2d.linearVelocity = dir * moveSpeed;
 
+    }
+
+    private void ResetBall()
+    {
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
