@@ -39,6 +39,7 @@ public class Ball : MonoBehaviour
         if(scoreZone)
         {
             ResetBall();
+            InitialPush();
 
         }
     }
