@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour
     
     private void Start()
     {
-       InitialPush;
+       InitialPush();
 
     }
 
