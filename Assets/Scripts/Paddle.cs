@@ -30,9 +30,8 @@ public class Paddle : MonoBehaviour
         movement = Input.GetAxis("MovePlayer2");
         break;
 
-    return movement;
-
     }
+    return movement;
     
   }
 
