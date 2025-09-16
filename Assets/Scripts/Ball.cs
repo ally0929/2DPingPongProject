@@ -11,7 +11,7 @@ public class Ball : MonoBehaviour
         dir.y = Random.Range(-maxInitialAngle, maxInitialAngle);
 
         rb2d.linearVelocity = Vector2.left;
-        
+        rb2d.velocity = dir * moveSpeed; 
 
     }
 
