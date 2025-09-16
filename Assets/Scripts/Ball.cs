@@ -26,7 +26,10 @@ public class Ball : MonoBehaviour
 
     private void ResetBall()
     {
-        
+        float posY = Random.Range(-maxStartY, maxStartY);
+        Vector2 position = new Vector2(startX, posY);
+        transform.position = position;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,7 +38,8 @@ public class Ball : MonoBehaviour
         ScoreZone scoreZone = collision.GetComponent<ScoreZone>();
         if(scoreZone)
         {
-            Debug.Log("do something!");
+            ResetBall();
+
         }
     }
 
