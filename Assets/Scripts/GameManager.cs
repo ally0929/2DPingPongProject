@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     if (id == 1)
         scorePlayer1++;
     
-    if (id -- 2)
+    if (id == 2)
         scorePlayer2++;
 
     UpdatedScores();
@@ -21,6 +21,6 @@ public class GameManager : MonoBehaviour
     private void UpdatedScores()
     {
         scoreTextLeft.SetScore(scorePlayer1);
-        scoreTextright.SetScore(scorePlayer2);
+        scoreTextRight.SetScore(scorePlayer2);
     }
 }
