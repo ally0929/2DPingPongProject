@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Paddle
   rb2d: {fileID: 6126021119966043942}
   id: 0
-  moveSpeed: 2
+  moveSpeed: 8
 --- !u!50 &6126021119966043942
 Rigidbody2D:
   serializedVersion: 5

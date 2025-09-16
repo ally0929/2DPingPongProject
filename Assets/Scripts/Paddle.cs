@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Paddle : MonoBehaviour
 {
@@ -28,15 +30,17 @@ public class Paddle : MonoBehaviour
         movement = Input.GetAxis("MovePlayer2");
         break;
 
-    }
     return movement;
+
+    }
+    
   }
 
   private void Move(float movement)
   {
-    Vector2 velo = rb2d.velocity;
+    Vector2 velo = rb2d.linearVelocity;
     velo.y = moveSpeed * movement;
-    rb2d.velocity = velo; 
+    rb2d.linearVelocity = velo; 
 
   }
 
