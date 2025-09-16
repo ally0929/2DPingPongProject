@@ -3,7 +3,6 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public Rigidbody2D rb2d;
-
     public float maxInitialAngle = 0.67f;
     
     private void Start()
@@ -16,10 +15,6 @@ public class Ball : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
  
