@@ -24,7 +24,11 @@ public class Ball : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
 
     {
-        Debug.Log("ladida");
+        ScoreZone scoreZone = collision.GetComponent<ScoreZone>();
+        if(scoreZone)
+        {
+            Debug.Log("do something!");
+        }
     }
 
 }
