@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
             scorePlayer2++;
 
         UpdatedScores();
-        HighlightScore();
+        HighlightScore(id);
 
     }
 
