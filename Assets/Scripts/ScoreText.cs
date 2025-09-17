@@ -8,7 +8,7 @@ public class ScoreText : MonoBehaviour
 
    public void Highlight();
    {
-      animator.SetTrigger("highlight")
+      animator.SetTrigger("highlight");
    }
    
    public void SetScore(int value)
