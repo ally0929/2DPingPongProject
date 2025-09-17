@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreText
   text: {fileID: 6718395335780570623}
+  animator: {fileID: 7976258217448885470}
 --- !u!114 &6718395335780570623
 MonoBehaviour:
   m_ObjectHideFlags: 0
