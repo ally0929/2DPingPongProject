@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 
     public GameUI gameUI;
     public int scorePlayer1, scorePlayer2; 
-    public ScoreText scoreTextLeft, scoreTextRight;
     public System.Action onReset;
 
     private void Awake()
@@ -31,22 +30,10 @@ public class GameManager : MonoBehaviour
         if (id == 2)
             scorePlayer2++;
 
-        UpdatedScores();
-        HighlightScore(id);
+        gameUI.UpdatedScores(scorePlayer1, scorePlayer2);
+        gameUI.HighlightScore(id);
 
     }
 
-    private void UpdatedScores()
-    {
-        scoreTextLeft.SetScore(scorePlayer1);
-        scoreTextRight.SetScore(scorePlayer2);
-    }
-
-    public void HighlightScore(int id)
-    {
-        if (id == 1)
-            scoreTextLeft.Highlight();
-        else
-            scoreTextRight.Highlight();
-    }
+   
 }
