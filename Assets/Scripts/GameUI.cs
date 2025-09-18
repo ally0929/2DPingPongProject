@@ -4,6 +4,7 @@ public class GameUI : MonoBehaviour
 {
     public ScoreText scoreTextPlayer1, scoreTextPlayer2; 
     public GameObject menuObject;
+    public TextMeshProUGUI winText;
 
     public System.Action OnStartGame;
 
@@ -25,5 +26,11 @@ public class GameUI : MonoBehaviour
     {
         menuObject.SetActive(false);
         OnStartGame?.Invoke();
+    }
+
+    public void OnGameEnds(int winnerId)
+    {
+        menuObject.SetActive(true);
+        winText.text = $"Player {winnerId} wins!";
     }
 } 

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public GameUI gameUI;
     public int scorePlayer1, scorePlayer2; 
     public System.Action onReset;
+    public int maxScore = 4;
 
     private void Awake()
     {
@@ -32,8 +33,20 @@ public class GameManager : MonoBehaviour
 
         gameUI.UpdatedScores(scorePlayer1, scorePlayer2);
         gameUI.HighlightScore(id);
+        CheckWin();
 
     }
+
+    public void CheckWin();
+    {
+        int winnerId = scorePLayer1 == maxScore ? 1 : scorePlayer2 == msxScore ? 2 : 0;
+
+        if (winnerId != 0)
+        {
+            gameUI.OnGameEnds(winnerId);
+        }
+    }
+
 
    
 }
