@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
     {
 
        GameManager.instance.onReset += ResetBall;
-       GameManager.instance.gameUI.onStartGame += ResetBall;
+       GameManager.instance.gameUI.OnStartGame += ResetBall;
 
     }
 
