@@ -19,20 +19,19 @@ public class GameManager : MonoBehaviour
         else
         {
             instance = this;
-            gameUI.OnStartGame =+ OnStartGame;
+            gameUI.OnStartGame += OnStartGame; // ✅ fixed typo
         }
     }
 
     public void OnScoreZoneReached(int id)
     {
-
         if (id == 1)
             scorePlayer1++;
     
         if (id == 2)
             scorePlayer2++;
 
-        gameUI.UpdatedScores(scorePlayer1, scorePlayer2);
+        gameUI.UpdateScores(scorePlayer1, scorePlayer2); // ✅ consistent method name
         gameUI.HighlightScore(id);
         CheckWin();
     }
@@ -55,6 +54,6 @@ public class GameManager : MonoBehaviour
     {
         scorePlayer1 = 0;
         scorePlayer2 = 0;
-        gameUI.UpdateScores(scorePlayer1, scorePlayer2);
+        gameUI.UpdateScores(scorePlayer1, scorePlayer2); // ✅ consistent method name
     }
 }

@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
 
-
 public class GameUI : MonoBehaviour
 {
     public ScoreText scoreTextPlayer1, scoreTextPlayer2; 
@@ -10,7 +9,7 @@ public class GameUI : MonoBehaviour
 
     public System.Action OnStartGame;
 
-    public void UpdatedScores(int scorePlayer1, int scorePlayer2)
+    public void UpdateScores(int scorePlayer1, int scorePlayer2) // ✅ fixed name
     {
         scoreTextPlayer1.SetScore(scorePlayer1);
         scoreTextPlayer2.SetScore(scorePlayer2);
@@ -35,4 +34,4 @@ public class GameUI : MonoBehaviour
         menuObject.SetActive(true);
         winText.text = $"Player {winnerId} wins!";
     }
-} 
+}
