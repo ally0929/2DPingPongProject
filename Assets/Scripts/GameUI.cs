@@ -5,6 +5,8 @@ public class GameUI : MonoBehaviour
     public ScoreText scoreTextPlayer1, scoreTextPlayer2; 
     public GameObject menuObject;
 
+    public System.Action OnStartGame;
+
      public void UpdatedScores(int scorePlayer1, int scorePlayer2)
     {
         scoreTextPlayer1.SetScore(scorePlayer1);
@@ -22,5 +24,6 @@ public class GameUI : MonoBehaviour
     public void OnStartGameButtonClicked()
     {
         menuObject.SetActive(false);
+        OnStartGame?.Invoke();
     }
 } 
