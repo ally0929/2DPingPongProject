@@ -7,7 +7,7 @@ public class GameUI : MonoBehaviour
 
     public System.Action OnStartGame;
 
-     public void UpdatedScores(int scorePlayer1, int scorePlayer2)
+    public void UpdatedScores(int scorePlayer1, int scorePlayer2)
     {
         scoreTextPlayer1.SetScore(scorePlayer1);
         scoreTextPlayer2.SetScore(scorePlayer2);

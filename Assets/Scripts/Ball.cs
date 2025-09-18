@@ -15,14 +15,14 @@ public class Ball : MonoBehaviour
     {
 
        GameManager.instance.onReset += ResetBall;
-       GameManager.instance.gameUI.onstartGame += ResetBall;
+       GameManager.instance.gameUI.onStartGame += ResetBall;
 
     }
 
     private void ResetBall()
     {
         ResetBallPosition();
-        InitialPush();
+        InitialPush(); 
     }
 
     private void InitialPush()
