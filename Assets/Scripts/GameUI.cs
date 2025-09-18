@@ -5,7 +5,7 @@ public class GameUI : MonoBehaviour
     public ScoreText scoreTextPlayer1, scoreTextPlayer2; 
     public GameObject menuObject;
 
-    public System.Action OnStartGame;
+    public System.Action onStartGame;
 
     public void UpdatedScores(int scorePlayer1, int scorePlayer2)
     {
