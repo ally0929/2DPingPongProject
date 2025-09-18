@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -6,12 +7,12 @@ public class GameManager : MonoBehaviour
 
     public GameUI gameUI;
     public int scorePlayer1, scorePlayer2; 
-    public System.Action onReset;
+    public Action onReset;
     public int maxScore = 4;
 
     private void Awake()
     {
-        if(instance)
+        if (instance)
         { 
             Destroy(gameObject);
         }
@@ -34,19 +35,15 @@ public class GameManager : MonoBehaviour
         gameUI.UpdatedScores(scorePlayer1, scorePlayer2);
         gameUI.HighlightScore(id);
         CheckWin();
-
     }
 
-    public void CheckWin();
+    public void CheckWin()
     {
-        int winnerId = scorePLayer1 == maxScore ? 1 : scorePlayer2 == msxScore ? 2 : 0;
+        int winnerId = scorePlayer1 == maxScore ? 1 : scorePlayer2 == maxScore ? 2 : 0;
 
         if (winnerId != 0)
         {
             gameUI.OnGameEnds(winnerId);
         }
     }
-
-
-   
 }
