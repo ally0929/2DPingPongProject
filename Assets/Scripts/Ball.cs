@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour
     
     private void Start()
     {
-       InitialPush();
+
        GameManager.instance.onReset += ResetBall;
 
     }
