@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameUI : MonoBehaviour
 {
     public ScoreText scoreTextPlayer1, scoreTextPlayer2; 
+    public GameObject menuObject;
 
      public void UpdatedScores(int scorePlayer1, int scorePlayer2)
     {
@@ -16,5 +17,10 @@ public class GameUI : MonoBehaviour
             scoreTextPlayer1.Highlight();
         else
             scoreTextPlayer2.Highlight();
+    }
+
+    public void OnStartGameButtonClicked()
+    {
+        menuObject.SetActive(false);
     }
 } 
